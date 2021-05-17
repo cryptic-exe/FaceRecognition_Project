@@ -5,14 +5,14 @@ l = []
 video_capture = cv.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-deepak_image = fr.load_image_file("E:\\deepak\\Miniprojects\\Miniproject\\assets\\deepak.jpg")
+deepak_image = fr.load_image_file("E:\\deepak\\Miniprojects\\FaceRecognition\\assets\\deepak.jpg")
 deepak_face_encoding = fr.face_encodings(deepak_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-payal_image = fr.load_image_file("E:\\deepak\\Miniprojects\\Miniproject\\assets\\payal.jpeg")
+payal_image = fr.load_image_file("E:\\deepak\\Miniprojects\\FaceRecognition\\assets\\payal.jpeg")
 payal_face_encoding = fr.face_encodings(payal_image)[0]
 
-yash_image = fr.load_image_file("E:\\deepak\\Miniprojects\\Miniproject\\assets\\yash.jpeg")
+yash_image = fr.load_image_file("E:\\deepak\\Miniprojects\\FaceRecognition\\assets\\yash.jpeg")
 yash_face_encoding = fr.face_encodings(yash_image)[0]
 
 # Creating list of known face encodings and their names
@@ -97,7 +97,7 @@ video_capture.release()
 cv.destroyAllWindows()
 
 l = (set(l))
-fi = open('E:\\deepak\\Miniprojects\\Miniproject\\sample.txt','w')
+fi = open('E:\\deepak\\Miniprojects\\FaceRecognition\\sample.txt','w')
 for x in l:
     fi.write(x+'\n')
 fi.close()
